@@ -14,6 +14,9 @@ const Hero = () => {
             width={'720'}
             height={'600'}
             priority
+            sizes='(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw'
           />
         </div>
         <div className='lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center'>

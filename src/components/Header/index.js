@@ -14,6 +14,9 @@ const Header = () => {
             className='w-12 h-12 p-2  rounded-full'
             src={GurduevImage}
             alt='Mediatates '
+            sizes='(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw'
           />
           <span className='ml-3 text-xl'>Surta Mediatates</span>
         </Link>
