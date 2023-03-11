@@ -20,4 +20,9 @@
   .anchor-footer-nav {
     @apply mb-2 text-primary-200 transition duration-500 ease-in-out hover:text-secondary-300;
   }
+
+  // Bottom Nav Buttons Styling
+  .bottom-nav-buttons {
+    @apply grow rounded bg-neutral-800 py-2 font-bold text-white transition duration-300 ease-in-out hover:bg-hero-400 focus:outline-none focus:ring-2 focus:ring-hero-400 focus:ring-offset-2 active:scale-95 active:bg-hero-300 active:text-neutral-700;
+  }
 }

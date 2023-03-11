@@ -11,12 +11,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        su: {
-          'ch-200': '#EEEEEE',
-          'ch-300': '#393E46',
-          'ch-400': '#00ADB5',
-          'ch-500': '#222831',
-        },
         primary: {
           100: '#f1f7f7',
           200: '#d5e8e7',
@@ -27,6 +21,12 @@ module.exports = {
           700: '#204d46',
           800: '#0f2d23',
           900: '#061412',
+        },
+        hero: {
+          100: '#F1FFC8',
+          200: '#D1FF55',
+          300: '#A8FF00',
+          400: '#8FD900',
         },
         secondary: {
           100: '#fdf1e6',
