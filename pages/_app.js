@@ -2,7 +2,11 @@ import { DefaultSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import Seo from '../next-seo.config';
 
-import '../styles/globals.css';
+import BottomNavigation from '../src/components/BottomNavigation';
+import Footer from '../src/components/Footer';
+import Header from '../src/components/Header';
+
+import '../styles/globals.scss';
 import { HOST } from '../utils/SeoConst';
 
 function MyApp({ Component, pageProps }) {
@@ -12,8 +16,11 @@ function MyApp({ Component, pageProps }) {
   ).split('?')[0];
   return (
     <>
+      <Header />
       <DefaultSeo {...Seo} canonical={canonicalUrl} />
       <Component {...pageProps} />
+      <BottomNavigation />
+      <Footer />
     </>
   );
 }

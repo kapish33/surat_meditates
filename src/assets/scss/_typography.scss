@@ -1,0 +1,137 @@
+@tailwind components;
+
+@layer components {
+  .mcf-cpm {
+    // common alignment against container for inside content
+    // @apply px-3 py-3 sm:py-5 md:px-5 md:py-8 lg:px-9 xl:px-12;
+    @apply py-[3.75rem] px-4 sm:py-[5rem] md:px-5;
+  }
+  /*
+    Display 1 to 3 for Mobile and desktop
+  
+    We use these styles only for for decorative purposes. This can be our tagline, the main title of a page or a quote. It generally gives the layout an extra kick and makes our brand instantly recognisable. We do not use it for longform as the rounded tips are not crisp enough for long form copy.
+    Each style exists twice: for desktop/tablet and for mobile. Because of their size, we need to rescale them for mobile. This should be reflected in the CSS styling.
+  
+     Display 1 Desktop Montserrat Bold / 600 Display 1 Mobile Montserrat Bold / 600
+     */
+  .mcf-typo-d1 {
+    @apply text-[2.75rem] leading-[3.75rem] md:text-[4.25rem] md:leading-[5.25rem];
+  }
+  /* Display 2 Desktop Montserrat Bold / 600 Display 2 Mobile Montserrat Bold / 600 */
+  .mcf-typo-d2 {
+    @apply text-[2.125rem] leading-[2.625rem] md:text-[2.25rem] md:leading-[3.75rem];
+  }
+  /* Display 3 Desktop Montserrat Bold / 600 Display 3 Mobile Montserrat Bold / 600 */
+  .mcf-typo-d3 {
+    @apply text-[1.5rem] leading-[2rem] md:text-[2rem] md:leading-[2.5rem];
+  }
+
+  /* 
+    Heading h1 to h2 for mobile and desktop
+    @@   We use headings to give hierarchy to a layout. The main title or message of a page should always have the biggest heading on that page. It is not necessary to start with Heading 1 on a page. We never use headings for longform copy.
+    @@ Each style exists twice: for desktop/tablet and for mobile. Because of their size, we need to rescale them for mobile. This should be reflected in the CSS styling.
+   */
+
+  /* Heading 1 Desktop Montserrat Bold / 400 Heading 1 Mobile Montserrat Bold / 400 */
+  h1 {
+    @apply text-[2.125rem] leading-[2.625rem] md:text-[3.25rem] md:leading-[4.625rem];
+  }
+
+  /* Heading 2 Desktop Montserrat Bold / 400 Heading 2 Mobile Montserrat Bold / 400 */
+  h2 {
+    @apply text-[1.875rem] leading-[2.375rem] md:text-[2.725rem] md:leading-[3.75rem];
+  }
+  /* Heading 3 Desktop Montserrat Bold / 400 Heading 3 Mobile Montserrat Bold / 400 */
+  h3 {
+    @apply text-[1.625rem] leading-[2.125rem] md:text-[2rem] md:leading-[2.75rem];
+  }
+
+  /* Heading 4 Desktop Montserrat Bold / 400 Heading 4 Mobile Montserrat Bold / 400 */
+  h4 {
+    @apply text-[1.375rem] leading-[1.75rem] md:text-[1.75rem] md:leading-[2.25rem];
+  }
+
+  /* Heading 5 Desktop Montserrat Bold / 400 Heading 5 Mobile Montserrat Bold / 400 */
+  h5 {
+    @apply text-[1.25rem] leading-[1.625rem] md:text-[1.375rem] md:leading-[2rem];
+  }
+
+  /* Heading 6 Desktop Open Sans SemiBold / 600  Heading 6 Mobile Open Sans SemiBold / 600 */
+  h6 {
+    @apply text-[1.125rem] leading-[1.625rem] md:text-[1.25rem] md:leading-[1.75rem];
+  }
+
+  /*
+    @@ We use these styles to format longford copy but also functional elements like labels of input fields or buttons. We never use text styles for headings or display purposes.
+    @@ Because of their size they apply for both desktop/tablet and mobile.
+     */
+
+  /* Body L Regular Open Sans Regular / 400 */
+  .mcf-blr {
+    @apply text-lg leading-[1.625rem];
+  }
+
+  /* Body L Bold Open Sans Bold / 700 */
+  .mcf-blb {
+    @apply text-lg leading-[1.625rem] text-mcf-gray-1000-color;
+  }
+  /*  Body L Italic Open Sans Italic  / 400 */
+  .mcf-bli {
+    @apply text-lg leading-[1.625rem] text-mcf-gray-1000-color;
+  }
+  /* Body L Hyperlink Open Sans Regular / 400 */
+  .mcf-blh {
+    @apply text-lg leading-[1.625rem] text-mcf-primary-600-color;
+  }
+
+  /* Body M Regular Open Sans Regular / 400 */
+  .mcf-bmr {
+    @apply text-lg;
+  }
+
+  /* Body M Bold Open Sans Bold / 700 */
+  .mcf-bmb {
+    @apply text-base text-mcf-gray-1000-color;
+  }
+
+  /* Body M Italic Open Sans Italic / 400 */
+  .mcf-bmi {
+    @apply text-base text-mcf-gray-1000-color;
+  }
+  /* Body M Hyperlink Open Sans Regular / 400 */
+  .mcf-bmh {
+    @apply text-base text-mcf-primary-600-color;
+  }
+
+  /* Body S Regular Open Sans Regular / 400 */
+  .mcf-bsr {
+    @apply text-sm;
+  }
+
+  /* Body S Bold Open Sans Bold / 700 */
+  .mcf-bsb {
+    @apply text-sm text-mcf-gray-1000-color;
+  }
+  /* Body S Italic Open Sans Italic / 400 */
+  .mcf-bsi {
+    @apply text-sm text-mcf-gray-1000-color;
+  }
+
+  /* Body S Hyperlink Open Sans Regular / 400 */
+  .mcf-bsh {
+    @apply text-sm text-mcf-primary-600-color;
+  }
+  /* Body XS Regular Open Sans Regular / 400 */
+  .mcf-bxr {
+    @apply text-xs leading-[1.125rem];
+  }
+  /* Body XS Bold Open Sans Bold / 700 */
+  .mcf-bxb {
+    @apply text-sm leading-[1.125rem] text-mcf-gray-1000-color;
+  }
+
+  /* Body XS Bold Open Sans Bold / 700 */
+  .mcf-bxi {
+    @apply text-sm leading-[1.125rem] text-mcf-gray-1000-color;
+  }
+}

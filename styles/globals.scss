@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '../src/assets/scss/buttons';
+@import '../src/assets/scss/forms';
+@import '../src/assets/scss/typography';
+@import '../src/assets/scss/fonts.config';
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+@layer components {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  .mcf-typo-d1,
+  .mcf-typo-d2,
+  .mcf-typo-d3 {
+    @apply font-montserrat-700;
+  }
+
+  h6 {
+    @apply font-montserrat-600;
+  }
+
+  .mcf-blr,
+  .mcf-blh,
+  .mcf-bmr,
+  .mcf-bmh,
+  .mcf-bsr,
+  .mcf-bsh,
+  .mcf-bxr {
+    @apply font-open-sans-400;
+  }
+
+  .mcf-blb,
+  .mcf-bmb,
+  .mcf-bsb,
+  .mcf-bxb {
+    @apply font-open-sans-700;
+  }
+}

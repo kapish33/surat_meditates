@@ -1,55 +1,73 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import GurduevImage from '../../assets/guru-png.png';
+// import TaxSavingPro from '../../assets/images/logo.png';
 
-const Header = () => {
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import { headerRoutes } from './headconst';
+
+function Header() {
+  const [isSticky, setIsSticky] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () =>
+    window.scrollY > 0 ? setIsSticky(true) : setIsSticky(false);
+
   return (
-    <header className='text-gray-400 bg-gray-900 body-font'>
-      <div className='container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center'>
-        <Link
-          href='/'
-          className='flex title-font font-medium items-center text-white mb-4 md:mb-0'>
-          <Image
-            className='w-12 h-12 p-2  rounded-full'
-            src={GurduevImage}
-            alt='Mediatates '
-            sizes='(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw'
-          />
-          <span className='ml-3 text-xl'>Surta Mediatates</span>
-        </Link>
-        <nav className='md:ml-auto flex flex-wrap items-center text-base justify-center'>
-          <Link href='/' className='mr-5 hover:text-white'>
-            First Link
+    <header
+      className={`fixed w-full z-50 transition-all bg-white  ${
+        isSticky ? 'shadow-lg' : ''
+      }`}>
+      <div className='container mx-auto px-4'>
+        <div className='flex items-center justify-between py-4'>
+          <Link
+            href={headerRoutes.homePage.path}
+            className='text-2xl font-bold text-gray-800'>
+            {headerRoutes.homePage.name}
           </Link>
-          <Link href='/' className='mr-5 hover:text-white'>
-            Second Link
-          </Link>
-          <Link href='/' className='mr-5 hover:text-white'>
-            Third Link
-          </Link>
-          <Link href='/' className='mr-5 hover:text-white'>
-            Fourth Link
-          </Link>
-        </nav>
-        <button className='inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0'>
-          Button
-          <svg
-            fill='none'
-            stroke='currentColor'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth='2'
-            className='w-4 h-4 ml-1'
-            viewBox='0 0 24 24'>
-            <path d='M5 12h14M12 5l7 7-7 7'></path>
-          </svg>
-        </button>
+          <div className='flex items-center'>
+            {!showMenu && (
+              <nav className='hidden md:flex md:items-center'>
+                {headerRoutes.pc.map(({ path, css, name }, ind) => (
+                  <Link href={path} className={css} key={ind}>
+                    {name}
+                  </Link>
+                ))}
+              </nav>
+            )}
+            <button
+              aria-label='navigation menu'
+              onClick={() => setShowMenu(!showMenu)}
+              className='md:hidden ml-4 text-gray-600 hover:text-gray-800 focus:outline-none'>
+              <svg viewBox='0 0 20 20' fill='currentColor' className='h-6 w-6'>
+                <path
+                  fillRule='evenodd'
+                  d='M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 110-2h6a1 1 0 110 2h-6z'
+                  clipRule='evenodd'
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
+      {showMenu && (
+        <div className='md:hidden block bg-white'>
+          <nav className='text-gray-600 font-bold animate-fade-in duration-2000'>
+            {headerRoutes.mobile.map(({ path, css, name }, ind) => (
+              <Link href={path} className={css} key={ind}>
+                {name}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   );
-};
+}
 
 export default Header;

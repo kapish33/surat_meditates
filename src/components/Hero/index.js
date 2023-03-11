@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import GurudevHeroImage from '../../assets/Gurudev-Sri-Sri-Ravi-Shankar.webp';
+import TaxSavingProHeroimage from '../../assets/images/HeroTaxImage.png';
 
 const Hero = () => {
   return (
@@ -9,8 +9,8 @@ const Hero = () => {
         <div className='lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0'>
           <Image
             className='object-cover object-center rounded'
-            alt='hero'
-            src={GurudevHeroImage}
+            alt='Tax Saving Pro'
+            src={TaxSavingProHeroimage}
             width={'720'}
             height={'600'}
             priority

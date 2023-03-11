@@ -1,0 +1,23 @@
+@tailwind components;
+
+@layer components {
+  .anchor_nonunderline_mobile {
+    @apply block border-b border-gray-300 px-4 py-2 hover:bg-gray-100;
+  }
+  .anchor_nonunderline_mobile {
+    @apply block px-4 py-2 hover:bg-gray-100;
+  }
+  .anchor_button_mobile {
+    @apply m-2 my-2 block rounded-lg bg-green-500 px-4 py-2 text-center text-white hover:bg-green-600;
+  }
+  .anchor_pc {
+    @apply mx-4 font-medium text-gray-600 hover:text-gray-800;
+  }
+  .anchor_pc_button {
+    @apply rounded-lg bg-green-500 px-4 py-2 font-medium text-white hover:bg-green-600;
+  }
+  /*Bottom Nav <a> css*/
+  .anchor-footer-nav {
+    @apply mb-2 text-primary-200 transition duration-500 ease-in-out hover:text-secondary-300;
+  }
+}
