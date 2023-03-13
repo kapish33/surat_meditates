@@ -1,5 +1,4 @@
-// import TaxSavingPro from '../../assets/images/logo.png';
-
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { headerRoutes } from './headconst';
@@ -20,7 +19,7 @@ function Header() {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all bg-white  ${
+      className={`fixed z-50 w-full bg-white transition-all  ${
         isSticky ? 'shadow-lg' : ''
       }`}>
       <div className='container mx-auto px-4'>
@@ -28,7 +27,16 @@ function Header() {
           <Link
             href={headerRoutes.homePage.path}
             className='text-2xl font-bold text-gray-800'>
-            {headerRoutes.homePage.name}
+            <div class='flex h-12 w-12 animate-pulse items-center justify-center rounded-full bg-hero-400'>
+              <div class='flex h-11 w-11 items-center justify-center rounded-full bg-white'>
+                <Image
+                  className='h-10 w-10 rounded-full bg-primary-500 '
+                  alt='Tax Saving Pro'
+                  src={headerRoutes.homePage.imagePath}
+                  priority
+                />
+              </div>
+            </div>
           </Link>
           <div className='flex items-center'>
             {!showMenu && (
@@ -43,7 +51,7 @@ function Header() {
             <button
               aria-label='navigation menu'
               onClick={() => setShowMenu(!showMenu)}
-              className='md:hidden ml-4 text-gray-600 hover:text-gray-800 focus:outline-none'>
+              className='ml-4 text-gray-600 hover:text-gray-800 focus:outline-none md:hidden'>
               <svg viewBox='0 0 20 20' fill='currentColor' className='h-6 w-6'>
                 <path
                   fillRule='evenodd'
@@ -56,8 +64,8 @@ function Header() {
         </div>
       </div>
       {showMenu && (
-        <div className='md:hidden block bg-white'>
-          <nav className='text-gray-600 font-bold animate-fade-in duration-2000'>
+        <div className='block bg-white md:hidden'>
+          <nav className='animate-fade-in duration-2000 font-bold text-gray-600'>
             {headerRoutes.mobile.map(({ path, css, name }, ind) => (
               <Link href={path} className={css} key={ind}>
                 {name}

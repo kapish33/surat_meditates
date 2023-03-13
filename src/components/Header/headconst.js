@@ -1,10 +1,12 @@
 import { siteRoutes } from '../../../utils/sitePaths';
+import homeImage from '../../assets/images/logo.png';
 const { landingPagesNav } = siteRoutes;
 
 export const headerRoutes = {
   homePage: {
     path: landingPagesNav.home,
     name: 'Logo',
+    imagePath: homeImage,
   },
   mobile: [
     {
