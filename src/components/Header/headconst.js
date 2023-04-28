@@ -42,7 +42,7 @@ export const headerRoutes = {
       name: 'Products',
     },
     {
-      path: landingPagesNav.Products,
+      path: landingPagesNav.Pricing,
       css: 'anchor_pc',
       name: 'Pricing',
     },
