@@ -1,6 +1,5 @@
 import React from 'react';
 import Hero from '../src/components/Hero';
-import Pricing from '../src/components/Pricing';
 import Stats from '../src/components/Stats';
 
 const index = () => {
@@ -8,7 +7,6 @@ const index = () => {
     <>
       <Hero />
       <Stats />
-      <Pricing />
     </>
   );
 };

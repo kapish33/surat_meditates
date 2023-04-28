@@ -22,4 +22,8 @@ export const SEO = {
     'Surat Meditates - Terms and Conditions',
     'Read our terms and conditions to learn about the guidelines for using Surat Meditates, including practices such as Sudarshan Kriya and Sahaj Samadhi. Discover our policies for user conduct, content, and privacy, as well as our disclaimers and limitations of liability. Use our platform with confidence and peace of mind.'
   ),
+  pricing: defaultSeoGenerator(
+    ` Surat Meditates | Art of Living Meditation Courses | Prices & Packages`,
+    `Discover the benefits of meditation with Art of Living's courses in Surat. Our meditation programs can help you reduce stress, improve focus, and find inner peace. Explore our pricing options for group and private sessions. Join us today and experience the power of meditation!`
+  ),
 };
