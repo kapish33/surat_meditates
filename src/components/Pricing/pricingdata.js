@@ -39,24 +39,24 @@ export const pricingData = {
       },
       buttonBelowText: 'Sahaj Samadhi',
     },
-
     {
-        popular: "FREE",
-        planName: "Introductory Session",
-        price: 0,
-        monthlyOrYearlyPrice: "session",
-        list: [
-          "Join our free introductory session to learn about our meditation programs",
-          "Discover the benefits of meditation and how it can help you reduce stress",
-          "Experience a guided meditation and relaxation technique",
-          "Meet our instructors and learn more about our courses",
-          "No commitment or payment required for the introductory session"
-        ],
-        butonText: "Register Now",
-        buttonAction: () => {
-          console.log("magic");
-        },
-        buttonBelowText: "Introductory Session",
-      },      
+      popular: 'IIM SPECIAL',
+      planName: 'Mindful Leadership Program',
+      price: 5000,
+      monthlyOrYearlyPrice: 'program',
+      list: [
+        'Join our exclusive Mindful Leadership Program developed in collaboration with IIM professors',
+        'Learn how mindfulness can enhance your leadership skills and decision-making abilities',
+        'Practice meditation and mindfulness techniques that can help you manage stress and improve focus',
+        'Network with other leaders and executives from various industries',
+        'Get personalized coaching and feedback from our experienced instructors',
+        'Improve your overall well-being and lead with greater purpose and clarity',
+      ],
+      butonText: 'Enroll Now',
+      buttonAction: () => {
+        console.log('magic');
+      },
+      buttonBelowText: 'Mindful Leadership Program',
+    },
   ],
 };
