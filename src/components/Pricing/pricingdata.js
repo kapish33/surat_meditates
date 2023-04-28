@@ -41,21 +41,22 @@ export const pricingData = {
     },
 
     {
-      planName: 'Import - Export Code from DGFT',
-      price: 1000,
-      monthlyOrYearlyPrice: 'yr',
-      list: [
-        'Application for IEC Code with DGFT',
-        'Required Documents -',
-        '3. Providing Guidance on GST Rates',
-        '4. Providing Guidance on Making Invoice',
-        '5. Providing Guidance on Other GST Provisions by CA',
-      ],
-      butonText: 'Buy Now',
-      buttonAction: () => {
-        console.log('magic');
-      },
-      buttonBelowText: ' ',
-    },
+        popular: "FREE",
+        planName: "Introductory Session",
+        price: 0,
+        monthlyOrYearlyPrice: "session",
+        list: [
+          "Join our free introductory session to learn about our meditation programs",
+          "Discover the benefits of meditation and how it can help you reduce stress",
+          "Experience a guided meditation and relaxation technique",
+          "Meet our instructors and learn more about our courses",
+          "No commitment or payment required for the introductory session"
+        ],
+        butonText: "Register Now",
+        buttonAction: () => {
+          console.log("magic");
+        },
+        buttonBelowText: "Introductory Session",
+      },      
   ],
 };
