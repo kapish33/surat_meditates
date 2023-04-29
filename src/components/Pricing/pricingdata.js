@@ -1,3 +1,5 @@
+import { G_FORM } from '../../../utils/nameConst';
+
 export const pricingData = {
   pricingModel: [
     {
@@ -15,7 +17,7 @@ export const pricingData = {
       ],
       butonText: 'Enroll Now',
       buttonAction: () => {
-        console.log('magic');
+        window.open(G_FORM.SudarshanKriya);
       },
       buttonBelowText: 'Sudarshan Kriya',
     },
@@ -35,7 +37,7 @@ export const pricingData = {
       ],
       butonText: 'Enroll Now',
       buttonAction: () => {
-        console.log('magic');
+        window.open(G_FORM.SahajSamadhi);
       },
       buttonBelowText: 'Sahaj Samadhi',
     },
@@ -54,7 +56,7 @@ export const pricingData = {
       ],
       butonText: 'Enroll Now',
       buttonAction: () => {
-        console.log('magic');
+        window.open(G_FORM.IIM);
       },
       buttonBelowText: 'Mindful Leadership Program',
     },

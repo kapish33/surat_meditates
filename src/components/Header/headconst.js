@@ -1,11 +1,13 @@
-import { siteRoutes } from "../../../utils/sitePaths";
-import homeImage from "../../assets/images/logo.png";
+import { G_FORM } from '../../../utils/nameConst';
+import { siteRoutes } from '../../../utils/sitePaths';
+import { number, whatsAppURL } from '../../../utils/whatsappHelper';
+import homeImage from '../../assets/images/logo.png';
 const { landingPagesNav } = siteRoutes;
 
 export const headerRoutes = {
   homePage: {
     path: landingPagesNav.home,
-    name: "Logo",
+    name: 'Logo',
     imagePath: homeImage,
   },
   mobile: [
@@ -16,23 +18,23 @@ export const headerRoutes = {
     // },
     {
       path: landingPagesNav.Pricing,
-      css: "anchor_nonunderline_mobile",
-      name: "Pricing",
+      css: 'anchor_nonunderline_mobile',
+      name: 'Pricing',
     },
     {
-      path: landingPagesNav.Resources,
-      css: "anchor_nonunderline_mobile",
-      name: "Resources",
+      path: G_FORM.FreeIntroSession,
+      css: 'anchor_nonunderline_mobile',
+      name: 'Introductory Session',
     },
     {
-      path: landingPagesNav.Login,
-      css: "anchor_nonunderline_mobile",
-      name: "Call",
+      path: `tel:${number}`,
+      css: 'anchor_nonunderline_mobile',
+      name: 'Call',
     },
     {
-      path: landingPagesNav["Sign Up"],
-      css: "anchor_button_mobile",
-      name: "Whats App",
+      path: whatsAppURL(),
+      css: 'anchor_button_mobile',
+      name: 'Whats App',
     },
   ],
   pc: [
@@ -43,23 +45,23 @@ export const headerRoutes = {
     // },
     {
       path: landingPagesNav.Pricing,
-      css: "anchor_pc",
-      name: "Pricing",
+      css: 'anchor_pc',
+      name: 'Pricing',
     },
     {
-      path: landingPagesNav.Resources,
-      css: "anchor_pc",
-      name: "Resources",
+      path: G_FORM.FreeIntroSession,
+      css: 'anchor_pc',
+      name: 'Introductory Session',
     },
     {
-      path: landingPagesNav.Resources,
-      css: "anchor_pc",
-      name: "Call",
+      path: `tel:${number}`,
+      css: 'anchor_pc',
+      name: 'Call',
     },
     {
-      path: landingPagesNav["Sign Up"],
-      css: "anchor_pc_button",
-      name: "Whats App",
+      path: whatsAppURL(),
+      css: 'anchor_pc_button',
+      name: 'Whats App',
     },
   ],
 };

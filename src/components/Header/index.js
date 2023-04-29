@@ -27,8 +27,8 @@ function Header() {
           <Link
             href={headerRoutes.homePage.path}
             className='text-2xl font-bold text-gray-800'>
-            <div class='flex h-12 w-12 animate-pulse items-center justify-center rounded-full bg-hero-400'>
-              <div class='flex h-11 w-11 items-center justify-center rounded-full bg-white'>
+            <div className='flex h-12 w-12 animate-pulse items-center justify-center rounded-full bg-hero-400'>
+              <div className='flex h-11 w-11 items-center justify-center rounded-full bg-white'>
                 <Image
                   className='h-10 w-10 rounded-full bg-primary-500 '
                   alt='Tax Saving Pro'
@@ -64,7 +64,9 @@ function Header() {
         </div>
       </div>
       {showMenu && (
-        <div className='block bg-white md:hidden'>
+        <div
+          className='block bg-white md:hidden'
+          onClick={() => setShowMenu(!showMenu)}>
           <nav className='animate-fade-in duration-2000 font-bold text-gray-600'>
             {headerRoutes.mobile.map(({ path, css, name }, ind) => (
               <Link href={path} className={css} key={ind}>

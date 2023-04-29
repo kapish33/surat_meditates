@@ -3,7 +3,7 @@ export const siteRoutes = {
     home: '/',
     Products: '/products',
     Pricing: '/pricing',
-    Resources: '/resources',
+    Intro: '/intro-session',
     Login: '/login',
     'Sign Up': 'signup',
 

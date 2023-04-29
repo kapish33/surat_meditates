@@ -9,7 +9,7 @@ export const PricingCard = ({
   buttonBelowText,
 }) => {
   return (
-    <div className='w-full p-4 md:w-1/2 xl:w-1/4'>
+    <div className='w-full p-4 md:w-1/2 xl:w-1/4' onClick={buttonAction} >
       <div
         className={`relative flex h-full flex-col overflow-hidden rounded-lg border-2 ${
           popular ? ' border-[#F8B31C]' : 'border-gray-400'
@@ -50,7 +50,6 @@ export const PricingCard = ({
           })}
 
         <button
-          onClick={() => buttonAction}
           className={`mt-auto flex w-full items-center rounded border-0 ${
             popular
               ? 'bg-[#F8B31C] hover:bg-[#08254F] '
